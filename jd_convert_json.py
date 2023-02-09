@@ -7,12 +7,8 @@ from datetime import datetime
 
 import requests
 
-try:
-    from USER_AGENTS import get_user_agent
-    from sendNotify import send
-except:
-    print("缺少依赖文件USER_AGENTS.py 文件 https://github.com/XgzK/JD_annex/blob/master/USER_AGENTS.py 下载")
-    sys.exit(3)
+from USER_AGENTS import get_user_agent
+from sendNotify import send
 """
 const $ = new Env("店铺签到转换为json格式")
 Date: 2022/12/30 17:30

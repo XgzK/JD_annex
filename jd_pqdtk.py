@@ -20,17 +20,13 @@ from datetime import datetime
 import requests
 from requests.exceptions import ProxyError
 
-try:
-    from jdCookie import get_cookies
-    from USER_AGENTS import get_user_agent
-    from sendNotify import send
+from jdCookie import get_cookies
+from USER_AGENTS import get_user_agent
+from sendNotify import send
 
-    getCk = get_cookies()
-    if type(getCk) != list:
-        getCk = []
-except Exception as e:
-    print("缺少文件可能缺少其中一个，jdCookie.py sendNotify.py USER_AGENTS.py", e)
-    sys.exit(3)
+getCk = get_cookies()
+if type(getCk) != list:
+    getCk = []
 msg = ''
 JD_API_HOST = 'https://api.m.jd.com/api?appid=interCenter_shopSign'
 lis = []
