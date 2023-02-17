@@ -3,7 +3,7 @@ import re
 
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @Time    : 2023/1/17 14:00
+# @Time    : 2023/2/17 16:30
 # @Belongs  : InteIJ群管理者所有
 # @File    : destroy_pip.py
 # @Reason : 适应群内项目
@@ -43,7 +43,7 @@ for_list = ["import re", "IP_ALL_PROXY = os.environ.get('IP_ALL_PROXY', None)", 
             "        if re.search(i, url):",
             "            tf = False", "            break", "    if tf:",
             "        proxies = {'https': IP_ALL_PROXY, 'http': IP_ALL_PROXY}",
-            "    else:", "        proxies = proxies or {}", "else:", "    proxies = proxies or {}"]
+            "    else:", "        proxies =  proxies  or  {}", "else:", "    proxies = proxies  or  {}"]
 with open(re_file, mode='wt', encoding='utf-8') as f:
     for line in lin_file:
         if re.findall("proxies = proxies or \{\}", line):
