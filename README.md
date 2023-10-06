@@ -40,3 +40,4 @@ destroy_pip.py
 如果你没有使用青龙添加requests依赖，而是直接进入青龙容器执行 pip install requests 并且青龙面板依赖看不到requests依赖只需要执行一次destroy_pip.py即可
 ```
 
+测试使用
